@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #212121;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 20px 40px;
+    color: #fff;
+}
+
+#left {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+#menu-bar, #new-chart {
+    cursor: pointer;
+}
+
+#logo {
+    user-select: none;
+    font-size: 1.5rem;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navigation button {
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+.navigation button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+}
+
+.navigation button:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#centered-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+#details{
+    border: 2px solid white;
+    color: aliceblue;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    margin-top: 4.4rem;
+    margin-left: 0.2rem;
+}
+
+#details h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#details #para {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#details #para span {
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+#wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border: 2px solid #fff;
+    width: 30%;
+    height: 60%;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.icon-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    font-size: 2em;
+    background-color: #e57777;
+    color: black;
+    padding: 5px 10px;
+    font-weight: 500px;
+    border-bottom-left-radius: 20px;
+}
+
+.form-box {
+    width: 100%;
+    padding: 2rem;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #bbb;
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #f9faf9;
+    color: #fff;
+    outline: none;
+    font-size: 1em;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 0.75em;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #bbb;
+    font-size: 1.4em;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.login-register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-register a {
+    color: #f4f6f7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+#chat-container {
+    width: 50rem;
+    height: 35rem;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 20px black;
+    position: relative; /* Added position relative */
+    display: none;
+}
+
+#chat-box {
+    height: 90%;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#user-input {
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0; /* Positioned at the bottom */
+    text-align: center;
+    width: 80%;
+    text-align: center;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    height: 30px;
+}
+
+#send-btn {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    height: 35px;
+    width: 39px;
+}
+
+#send-btn span {
+    font-size: 1.3em;
+}
+
+#para{
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600px;
+    user-select: none;
+}
+
+#para h2{
+    font-family: cursive;
+}
+#para p{
+    font-family: cursive;
+}

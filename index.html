@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MED_BOT</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div id="left">
+            <div id="menu-bar" class="open-slider"><span class="material-symbols-outlined">menu</span></div>
+            <div id="new-chart"><span class="material-symbols-outlined">refresh</span></div>
+            <h2 id="logo">MEDBOT</h2>
+        </div>
+        <nav class="navigation">
+            <button id="signup-btn">Sign up</button><span id="and">&</span>
+            <button id="login-btn">Login</button>
+        </nav>
+    </header>
+
+    <div id="para">
+        <h2>Hello</h2>
+        <p>Welcome to MEDBOT</p>
+    </div>
+
+    <div id="wrapper">
+        <span class="icon-close"><span class="material-symbols-outlined">close</span></span>
+        <div class="form-box login" id="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <span class="icon"><span class="material-symbols-outlined"></span></span>
+                    <input type="text" required id="loginUsername">
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><span class="material-symbols-outlined"></span></span>
+                    <input type="password" required id="loginPassword">
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box signup"  id="signupbox" style="display: none;">
+            <h2>Sign up</h2>
+            <form id="signupForm">
+                <div class="input-box">
+                    <span class="icon"><span class="material-symbols-outlined"></span></span>
+                    <input type="text" required id="signupUsername">
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><span class="material-symbols-outlined"></span></span>
+                    <input type="email" required id="signupEmail">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><span class="material-symbols-outlined"></span></span>
+                    <input type="password" required id="signupPassword">
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Sign up</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <div id="user-input">
+            <input type="text" id="message-input" placeholder="Enter the medical issue...">
+            <button id="send-btn"><span>&#10148;</span></button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
